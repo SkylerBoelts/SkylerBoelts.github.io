@@ -30,8 +30,3 @@ jobs:
     - name: Build the Jekyll site
       run: |
         bundle exec jekyll build
-
-    - name: Deploy to GitHub Pages
-      if: github.ref == 'refs/heads/main'  # or 'refs/heads/master'
-      run: |
-        bundle exec jekyll deploy
