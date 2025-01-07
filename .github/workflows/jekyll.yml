@@ -1,0 +1,37 @@
+name: Jekyll site CI
+
+on:
+  push:
+    branches:
+      - main  # or 'master', depending on your default branch
+  pull_request:
+    branches:
+      - main  # or 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.0  # You can set this to the Ruby version you're using
+        bundler-cache: true
+
+    - name: Install dependencies
+      run: |
+        gem install bundler
+        bundle install
+
+    - name: Build the Jekyll site
+      run: |
+        bundle exec jekyll build
+
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'  # or 'refs/heads/master'
+      run: |
+        bundle exec jekyll deploy
