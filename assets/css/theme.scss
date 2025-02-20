@@ -17,7 +17,7 @@ html {
   }
   
 body {
-    background:#fff;
+    background:#46769B;
     font-size:17px;
     transition: all 200ms linear;
     font-family: "PT Sans",sans-serif;
@@ -70,8 +70,9 @@ img, video {max-width:100%;}
     left: 30px;
     font-size:13px;
     a {
-        background:#333;
-        color:white;
+        background:#fff;
+        /*Background Color*/
+        color:#fff;
         padding:2px 4px;
         border-radius:4px;
     }
