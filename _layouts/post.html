@@ -16,7 +16,12 @@ post_class: post-template
         
 		<div class="col-sm-11">
             <!-- Post Featured Image -->
-			{% if page.image %}<img class="featured-image img-fluid rounded" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">{% endif %}
+             {% if page.video %}
+            <div class="text-center mx-auto mb-5">
+            {% assign embed_video = page.video | replace: 'youtube.com/watch?v=', 'youtube.com/embed/' %}
+                <iframe class="featured-image img-fluid rounded responsive-video" width="1920" height="1080" src="{{ embed_video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+			{% else if page.image %}<img class="featured-image img-fluid rounded" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">{% endif %}
 			<!-- End Featured Image -->
 			<div class="mainheading">             
                 

@@ -159,6 +159,19 @@ small, .small {
         font-size:2.5em;
     }
 }
+
+.site-wrapper {
+    background-color: $offwhite; /* Adjust the color as needed */
+    padding: 20px; /* Adjust the padding around the content */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+/* Optionally, add a shadow to make the backing stand out more */
+.site-wrapper {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); 
+}
+
+
 .google-auto-placed {
     margin-bottom:2rem;
 } 

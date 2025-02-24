@@ -3,9 +3,13 @@
 //
 
 .card {
+  min-height: 400px; /* Adjust height */
+  padding: 10px;
   position: relative;
-  display: flex;
+  display: block;
   flex-direction: column;
+  align-items: flex-start; // Align content to the left
+  text-align: left; // Ensures all text is left-aligned
   min-width: 0;
   word-wrap: break-word;
   background-color: $card-bg;
@@ -32,10 +36,8 @@
 }
 
 .card-body {
-  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
-  // as much space as possible, ensuring footers are aligned to the bottom.
-  flex: 1 1 auto;
-  padding: $card-spacer-x;
+  text-align: left; /* Ensure text is left-aligned */
+  padding: 1rem;
 }
 
 .card-title {
@@ -48,7 +50,9 @@
 }
 
 .card-text:last-child {
-  margin-bottom: 0;
+  
+  text-align: left; // Ensures text inside is left-justified
+  // margin-bottom: 0;
 }
 
 .card-link {
@@ -124,15 +128,29 @@
   @include border-radius($card-inner-border-radius);
 }
 
-// Card image caps
-.card-img-top {
-  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
-  @include border-top-radius($card-inner-border-radius);
+.responsive-video {
+  width: 90%; /* Adjust the width to make it less wide */
+  max-width: 100%; /* Ensures the video won't stretch beyond the container */
+  height: auto;
+  aspect-ratio: 16 / 9; /* This ensures the video maintains a 16:9 ratio */
 }
 
+// Card image caps
+.card-img-top {
+  display: block; /* Make the image behave like a block element */
+  margin-left: auto; /* Auto left margin */
+  margin-right: auto; /* Auto right margin */
+  max-width: 100%; /* Prevent overflow */
+  height: auto; /* Keep aspect ratio */
+}
+
+
 .card-img-bottom {
-  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
-  @include border-bottom-radius($card-inner-border-radius);
+  display: block; /* Make the image behave like a block element */
+  margin-left: auto; /* Auto left margin */
+  margin-right: auto; /* Auto right margin */
+  max-width: 100%; /* Prevent overflow */
+  height: auto; /* Keep aspect ratio */
 }
 
 
@@ -141,6 +159,7 @@
 .card-deck {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 
   .card {
     margin-bottom: $card-deck-margin;
@@ -171,6 +190,7 @@
 .card-group {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 
   // The child selector allows nested `.card` within `.card-group`
   // to display properly.

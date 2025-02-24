@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Tiny Tamias"
+author: Skyler
+categories: [ Unreal Engine 5, Game Jam, Gameplay Programmer, Technical Systems Designer ]
+image: assets/images/2.jpg
+video: https://www.youtube.com/watch?v=3cTqibav5Mo
+excerpt: "Tamias is a brave young chipmunk who was raised by sugar gliders. His whole life, he was teased by his family because he couldn't glide. That all changes when he discovers the amazing buoyant power of bubble gum! Using this newfound skill, he must scale the magical sugar tree and help his neighbors along the way to prove that even a chipmunk can soar!!"
+---
+
+To Be Added To...

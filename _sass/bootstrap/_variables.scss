@@ -45,6 +45,8 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
+
+
 $colors: () !default;
 $colors: map-merge((
   "blue":       $blue,
@@ -62,8 +64,15 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
+$uclablue:       $blue !default;
+$saffron:       $blue !default;
+$offwhite:    #f1f1f1  !default;
+
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+$primary:       $uclablue !default;
+$secondary:     $saffron !default;
+
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -662,9 +671,9 @@ $card-border-radius:                $border-radius !default;
 $card-border-color:                 rgba($black, .125) !default;
 $card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
 $card-cap-bg:                       rgba($black, .03) !default;
-$card-bg:                           $white !default;
+$card-bg:                           $offwhite !default;
 
-$card-img-overlay-padding:          1.25rem !default;
+$card-img-overlay-padding:          50rem !default;
 
 $card-group-margin:                 ($grid-gutter-width / 2) !default;
 $card-deck-margin:                  $card-group-margin !default;
