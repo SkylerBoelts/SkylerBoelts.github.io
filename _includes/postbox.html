@@ -4,14 +4,14 @@
     <a href="{{ post.url | absolute_url }}">
         {% if post.video %}
             {% assign embed_video = post.video | replace: 'youtube.com/watch?v=', 'youtube.com/embed/' %}
-            <iframe class="card-img-top rounded mb-4 responsive-video" width="1920" height="1080" src="{{ embed_video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="card-img-top rounded mb-4 responsive-video" width="1920" height="1080" src="{{ embed_video }}?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             
         {% else if post.image %}
             <img class="card-img-top rounded mb-4" src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}">
         {% endif %}
     </a>
     <div class="card-block">
-        <h2 class="card-title h4 serif-font"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+        <h2 class="card-title h2 serif-font"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
         <ul class="tags">
             {% assign sortedCategories = post.categories | sort %}
             {% for category in sortedCategories %}
@@ -20,7 +20,10 @@
             </li>
             {% endfor %}
         </ul>
-        <p class="card-text text-muted">{{ post.excerpt | strip_html  }}</p>
+        <p class="card-text ">{{ post.excerpt | strip_html  }}</p>
+        <div class="d-flex justify-content-center mt-3">
+            <a href="{{ post.url | absolute_url }}" class="btn btn-dark rounded text-white px-3 btn-lg">More Information</a>
+        </div>
     </div>
 </div>
 <!-- end post -->

@@ -10,6 +10,9 @@ topmenu:
 # - title: Projects
   # url: "categories/"
 
+- title: Resume
+  url: resume/
+  
 - title: Contact
   url: "contact/"
   
