@@ -20,7 +20,7 @@
             </li>
             {% endfor %}
         </ul>
-        <p class="card-text ">{{ post.excerpt | strip_html  }}</p>
+        <p class="card-text ">{{ post.excerpt | strip_html | newline_to_br }}</p>
         <div class="d-flex justify-content-center mt-3">
             <a href="{{ post.url | absolute_url }}" class="btn btn-dark rounded text-white px-3 btn-lg">More Information</a>
         </div>
