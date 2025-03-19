@@ -5,7 +5,7 @@ author: Skyler
 categories: [ Unity, Project, Multiplayer Gameplay Programmer, Technical Systems Designer, Steam ]
 image: assets/images/2.jpg
 video: https://www.youtube.com/watch?v=GMKwhS32TX0
-excerpt: "A whimsical 'co-op-petitive' dungeon claw-er where a party of adorable cat wizards explore an ever-changing island of discovery!"
+excerpt: "A whimsical 'co-op-petitive' dungeon claw-er where a party of adorable cat wizards explore an ever-changing island of discovery!\n\n I was responsible for the core gameplay systems and was the Technical Systems Designer."
 featured: true;
 ---
 
