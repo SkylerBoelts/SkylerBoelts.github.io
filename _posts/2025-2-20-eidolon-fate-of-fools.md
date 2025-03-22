@@ -6,7 +6,7 @@ categories: [ Unreal Engine 5, Project, Multiplayer Gameplay Programmer, Technic
 image: assets/images/2.jpg
 video: https://www.youtube.com/watch?v=NdUt3TE0nxY
 excerpt: "A mystical networked arena shooter with a card game twist. Astral combatants use abilities inspired by major arcana tarot cards.\n\nI am responsible for the systems design, core gameplay programming, and networking."
-featured: true;
+featured: true
 ---
 
 Eidolon: Fate of Fools is a Tarot-themed networked arena shooter with card-game mechanics made in Unreal Engine 5. I made the game with a cross-discipline team of 8 people: 5 programmers, 2 artists, and 1 level designer. Many of the programmers held design roles as well. The project was primarily intended to be a demo/proof of concept to get more experience working on a networked game, with the additional goal of making a game casual and hardcore shooter fans could enjoy together. My role on the team was as multiplayer gameplay programmer and technical systems designer. I was responsible for all networking features in Unreal and for creating and iterating upon the core gameplay systems.

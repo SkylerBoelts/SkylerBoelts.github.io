@@ -124,16 +124,32 @@
 }
 
 .card-img {
-  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  width: 90%; // Required because we use flexbox and this inherently applies align-self: stretch
+  max-width: 100%; /* Prevents overflow beyond the parent */
   @include border-radius($card-inner-border-radius);
 }
 
-.responsive-video {
-  width: 90%; /* Adjust the width to make it less wide */
-  max-width: 100%; /* Ensures the video won't stretch beyond the container */
-  height: auto;
-  aspect-ratio: 16 / 9; /* This ensures the video maintains a 16:9 ratio */
+.responsive-video-container {
+  position: relative;
+  width: 90%; /* Video container is 90% of the parent container */
+  max-width: 100%; /* Prevents overflow beyond the parent */
+  margin: 0 auto; /* Centers the video container horizontally */
+  padding-bottom: 50.625%; /* 16:9 aspect ratio (height/width = 9/16) */
+  height: 0;
+  overflow: hidden; /* Ensures no content overflows */
+  @include border-radius($card-inner-border-radius);
 }
+
+.responsive-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Makes iframe take up full width of the container */
+  height: 100%; /* Makes iframe take up full height of the container */
+}
+
+
+
 
 // Card image caps
 .card-img-top {

@@ -2,13 +2,21 @@
 {% assign author = site.authors[post.author] %}
 <div class="card">
     <a href="{{ post.url | absolute_url }}">
-        {% if post.video %}
-            {% assign embed_video = post.video | replace: 'youtube.com/watch?v=', 'youtube.com/embed/' %}
-            <iframe class="card-img-top rounded mb-4 responsive-video" width="1920" height="1080" src="{{ embed_video }}?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            
-        {% else if post.image %}
-            <img class="card-img-top rounded mb-4" src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}">
+        
+        {% if post.featured == true %}
+        
+        <h1 class="font-weight-bold mt-4 mb-4 serif-font fs-5 fs-md-3 mb-6" style="text-align: center; ">Featured</h1>        
         {% endif %}
+        {% if post.video %}
+        {% assign embed_video = post.video | replace: 'youtube.com/watch?v=', 'youtube.com/embed/' %}
+        <div class="responsive-video-container">
+            <iframe class="card-img-top rounded mb-4 responsive-video" src="{{ embed_video }}?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    {% else if post.image %}
+        <img class="card-img-top rounded mb-4" src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}">
+    {% endif %}
+    
+
     </a>
     <div class="card-block">
         <h2 class="card-title h2 serif-font"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
