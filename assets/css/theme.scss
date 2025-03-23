@@ -137,8 +137,20 @@ small, .small {
 ================================================== */
 .hero {
     background: #fdd93d;
-    padding: 5rem 5rem;
-}
+    padding: 2rem; /* Smaller padding by default */
+  }
+  
+  @media (min-width: 768px) {
+    .hero {
+      padding: 3rem; /* Larger padding for tablets and above */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .hero {
+      padding: 4rem; /* Full padding for large screens */
+    }
+  }
 
 @media only screen and (max-width: 1024px) {
     .page-header.big {
@@ -384,7 +396,7 @@ ul.tags li a {
     padding: 3px 10px;
     border-radius: 3px;
     font-weight: 500;
-    background:#eee;
+    background: $saffron;
     text-transform: capitalize;    
     box-shadow: 0 6px 10px 0 rgba(169, 169, 169, 0.1);
 }

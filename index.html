@@ -7,26 +7,28 @@ background: '/img/bg-index.jpg'
 <!-- Home Intro
 ================================================== -->
 {% if page.url == "/" %} 
-<div class="rounded mb-5 hero">
-  <div class="row align-items-center justify-content-between flex-column-reverse flex-md-row">
+<div class="rounded hero">
+  <div class="row align-items-center justify-content-between">
     <!-- Text Content -->
-    <div class="col-12 col-md-6 text-center text-md-left">
+    <div class="col-12 order-2 order-md-1 col-md-6 text-center text-md-left">
       <h1 class="font-weight-bold mb-3 serif-font fs-4 fs-md-2">Skyler Boelts</h1>
-      <p class="lead mb-3 text-wrap fs-7 fs-md-6">
-        I am a Gameplay Programmer specializing in multiplayer and systems-heavy games. I am skilled at developing gameplay systems that align with a creative vision while ensuring flexibility for iteration and balance tuning. I also am an experienced Technical Producer with a strong ability to collaborate across disciplines, communicate effectively, and manage tasks efficiently.
+      <h2 class="font-weight-bold mb-3 serif-font fs-5 fs-md-3">Gameplay Programmer and Technical Designer</h2>
+      <p class="lead">
+        I am a Gameplay Programmer specializing in multiplayer and systems-heavy games. I am skilled at developing gameplay systems that align with a creative vision while ensuring flexibility for iteration and balance tuning.
       </p>
-      <p class="lead mb-4 text-wrap fs-7 fs-md-6">
+      <p class="lead">
         I have released multiple games to Steam and have worked in both Unreal Engine 5 and Unity.
       </p>
       <a href="{{site.baseurl}}/about" class="btn btn-dark text-white px-4 btn-lg">More Information</a>
     </div>
 
     <!-- Image Content -->
-    <div class="col-12 col-md-6 text-center">
+    <div class="col-12 order-1 order-md-2 col-md-6 text-center">
       <img class="intro img-fluid" src="{{site.baseurl}}/assets/images/PFPv1.jpg" alt="Profile Picture">
     </div>
   </div>
 </div>
+
 {% endif %}
 
 </div>
