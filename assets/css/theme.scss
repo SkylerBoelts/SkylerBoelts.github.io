@@ -176,19 +176,35 @@ small, .small {
     background-color: $offwhite; /* Adjust the color as needed */
     padding: 20px; /* Adjust the padding around the content */
     border-radius: 8px; /* Optional: Adds rounded corners */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4); 
 }
-
-/* Optionally, add a shadow to make the backing stand out more */
-.site-wrapper {
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); 
-}
-
 
 .google-auto-placed {
     margin-bottom:2rem;
 } 
 .comma:last-child {
     display:none;
+}
+
+/* Wrapper for section blocks */
+.section-block {
+  margin-bottom: 1.5rem; /* Adjust margin as needed */
+  margin-top: 1.5rem;
+  padding: 1rem; /* Add padding for inner spacing */
+  border: 1px solid #ddd; /* Optional border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Content styling inside the block */
+.section-block .content {
+  font-family: 'Georgia', serif; /* Serif font for content */
+  margin: 0 1rem; /* Adjust inner margin */
+}
+
+.section-block .clearfix {
+  clear: both; /* Ensure content doesn't overflow */
 }
 
 .hero h1 {

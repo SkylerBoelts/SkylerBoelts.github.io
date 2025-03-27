@@ -29,8 +29,7 @@
   </head>   
       
   {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
-  <body class="{{ layout }}">
-
+  <body class="{{ layout }} {% if page.disable_wrapper %}no-wrapper{% endif %}">
       
   <!-- Menu Navigation
   ================================================== -->
@@ -99,7 +98,7 @@
       
   <!-- Container
   ================================================== -->    
-  <main class="container">   
+  <main class="container {% if page.wrapper_disabled %}no-wrapper{% endif %}">
     <div class="site-wrapper">
       <!-- Your existing content goes here -->
       {{ content }}  
