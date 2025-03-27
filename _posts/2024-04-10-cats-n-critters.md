@@ -10,3 +10,11 @@ featured: true;
 ---
 
 To Be Added To...
+
+LAYOUT PLAN:
+
+Introduction/Summary
+Trailer Video
+Summary of Tasks
+Important Contribution 1
+Important Contribution 2

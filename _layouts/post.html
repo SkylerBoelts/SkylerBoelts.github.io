@@ -14,17 +14,19 @@ post_class: post-template
 		<!-- Post -->        
         {% assign author = site.authors[page.author] %}
         
-		<div class="col-sm-12">
-            <!-- Post Featured Image -->
-             {% if page.video %}
-            <div class="item-center mx-auto d-flex justify-content-center mb-5">
-            {% assign embed_video = page.video | replace: 'youtube.com/watch?v=', 'youtube.com/embed/' %}
-                <div class="responsive-video-container">
-                    <iframe class="featured-image img-fluid rounded responsive-video" width="1920" height="1080" src="{{ embed_video }}?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-			{% else if page.image %}<img class="featured-image img-fluid rounded" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">{% endif %}
-			<!-- End Featured Image -->
+        <div class="col-sm-12">
+          <!-- Post Featured Image -->
+          {% if page.video %}
+          <div class="item-center mx-auto d-flex justify-content-center mb-5">
+              {% assign embed_video = page.video | replace: 'youtube.com/watch?v=', 'youtube.com/embed/' %}
+              <div style="position: relative; width: 60%; max-width: 100%; padding-bottom: 33.75%; /* 16:9 aspect ratio */">
+                  <iframe class="featured-image img-fluid rounded responsive-video" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;" src="{{ embed_video }}?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+          </div>
+          {% else if page.image %}
+          <img class="featured-image img-fluid rounded" style="width: 60%; max-width: 100%; height: auto; border-radius: 8px; margin: auto; display: block;" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">
+          {% endif %}
+      <!-- End Featured Image -->
 			<div class="mainheading">             
                 
                 <!-- Post Categories -->
@@ -48,7 +50,7 @@ post_class: post-template
 			
 
 			<!-- Post Content -->
-			<div class="article-post serif-font">
+			<div class="article-post serif-font mx-5">
 				{{content}}
                 <div class="clearfix"></div>
 			</div>
