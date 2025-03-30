@@ -139,7 +139,12 @@ small, .small {
     background: #fdd93d;
     padding: 2rem; /* Smaller padding by default */
   }
-  
+  .highlight-color {
+    color: $blue; /* Change this to whatever color you want */
+  }
+  .page-list-text {
+    font-size: 20px;; /* Adjust this value as needed */
+  }
   @media (min-width: 768px) {
     .hero {
       padding: 3rem; /* Larger padding for tablets and above */
