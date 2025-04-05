@@ -11,7 +11,7 @@ team: ["4 Programmers", "3 Artists", "2 Game Designer", "1 Sound Designer/Audio 
 role: Engine Programmer, Tools Programmer, Producer
 engine:   Custom C++
 techCreated: ["Event system.", "Entity Component System.", "Scene System with Multi-Scene Support.", "Level editor support using Tiled.","Custom editor using IMGUI.", "JSON serialization/deserialization.", "Player controller refactoring.", "Production tasks including: task management, meeting leadership, hiring, QA, SPRINT planning, and more."]
-displayImages: [assets/images/2.jpg,assets/images/2.jpg,assets/images/2.jpg,assets/images/2.jpg]
+displayImages: [assets/images/Inline1.png,assets/images/Inline2.png,assets/images/Inline3.png,assets/images/Inline4.png]
 hideContent: true
 ---
 
