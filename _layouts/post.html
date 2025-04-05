@@ -81,21 +81,42 @@ post_class: post-template
           </ul>
         </div>        
         {% endif %}
+        
+        <!-- IMAGES -->
+        {% if page.displayImages %}
+        <div class="section-block">
+          <div class="row">
+            <h2 class="posttitle col-12">Images</h2>   
+            {% for member in page.displayImages %}
+              <div class="col-md-6 col-12 mb-4 d-flex justify-content-center">
+                <img 
+                  class="img-fluid rounded" 
+                  style="width: 100%; max-width: 500px; border-radius: 8px;" 
+                  src="{{ site.baseurl }}/{{ member }}" 
+                  alt="Image">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
 
 
         <!-- CONTRIBUTIONS -->
+         {% if page.hideContent != true %}
         <div class="section-block">
           <div class="content">
-
             <h2 class="posttitle">Project Summary</h2>   
             <!-- Replace this with your content -->
             {{content}}
             <div class="clearfix"></div>
           </div>
         </div>
+        {% endif %}
         
+        
+
         <!-- TEAM MAKEUP -->
-         {% if page.team %}
+        {% if page.team %}
         <div class="section-block">
           <h2 class="posttitle">Team</h2>   
           <ul>
@@ -105,7 +126,6 @@ post_class: post-template
           </ul>
         </div>
         {% endif %}
-
 
 <div class="site-wrapper">
       <!-- Your existing content goes here -->

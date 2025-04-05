@@ -11,6 +11,8 @@ team: ["5 Programmers", "4 Artists", "1 Game Designer", "1 Sound Designer"]
 role: Gameplay Programmer, Technical Systems Designer, Producer
 engine: Unreal
 techCreated: ["Player controller, gameplay state management, and physics.", "Movement abilities and simple upgrade system.", "World interaction, HUD, and some of the dialogue system.", "Audio event implementation through Wwise.", "Art pipeline support through implementation of various models, animations, HUD art."]
+displayImages: [assets/images/2.jpg,assets/images/2.jpg,assets/images/2.jpg,assets/images/2.jpg]
+hideContent: true
 ---
 
 To Be Added To...
